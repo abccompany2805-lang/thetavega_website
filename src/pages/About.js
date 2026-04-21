@@ -343,32 +343,35 @@ const certificationItems = [
     },
 
     heroTag: {
-      display: "inline-block",
-      padding: "7px 14px",
-      borderRadius: "999px",
-      background: "rgba(174, 44, 17, 0.08)",
-      color: "#AE2C11",
-      fontSize: "11px",
-      fontWeight: 700,
-      letterSpacing: "1.2px",
-      textTransform: "uppercase",
-      marginBottom: "16px",
-      border: "1px solid rgba(174, 44, 17, 0.10)",
+      
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "8px 16px",
+  borderRadius: "50px",
+  background: "rgba(255, 255, 255, 0.9)",
+  border: "1px solid rgba(0, 0, 0, 0.08)",
+  fontSize: "11px",
+  fontWeight: 700,
+  letterSpacing: "1px",
+  textTransform: "uppercase",
+  color: "rgb(174, 44, 17)",
+  boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.05)",
+  marginBottom: "1.35rem",
+  backdropFilter: "blur(8px)",
     },
 
     sectionTag: {
-      display: "inline-block",
-      padding: "7px 14px",
-      borderRadius: "999px",
-      background: "rgba(219,153,65,0.10)",
-      color: "#AE2C11",
-      fontSize: "11px",
-      fontWeight: 700,
-      letterSpacing: "1.1px",
-      textTransform: "uppercase",
-      marginBottom: "14px",
-      border: "1px solid rgba(219,153,65,0.14)",
-    },
+  display: "inline-block",
+  fontSize: "20px",
+  fontWeight: 700,
+  letterSpacing: "2px",
+  textTransform: "uppercase",
+  color: "rgb(174, 44, 17)",
+  marginBottom: "8px",
+  textAlign: "center",
+  width: "100%",
+},
 
     heroTitle: {
       fontSize: "clamp(2rem, 3.3vw, 3.25rem)",
@@ -721,7 +724,7 @@ const certificationItems = [
       fontWeight: 700,
       letterSpacing: "1.2px",
       textTransform: "uppercase",
-      color: "#AE2C11",
+      color: "var(--tv-gold)",
       marginBottom: "10px",
     },
 
@@ -744,7 +747,7 @@ const certificationItems = [
     closingStrong: {
       fontSize: "1.08rem",
       fontWeight: 800,
-      color: "#AE2C11",
+      color: "var(--tv-gold)",
       marginBottom: 0,
     },
   };
@@ -1028,12 +1031,24 @@ const certificationItems = [
             </p>
           </div>
 
-                   <div className="row g-4">
-  {leadershipData.map((leader, index) => (
-    <div className="col-lg-4 col-md-6" key={index}>
-      <LeadershipCard leader={leader} index={index} />
-    </div>
-  ))}
+              <div className="row g-4 justify-content-center">
+  {leadershipData.map((leader, index) => {
+    const isLastRow = index >= 3; // last 2 cards
+
+    return (
+      <div
+        key={index}
+        className={`col-lg-4 col-md-6 ${
+          isLastRow ? "d-flex justify-content-center" : ""
+        }`}
+        style={{
+          maxWidth: isLastRow ? "420px" : "100%",
+        }}
+      >
+        <LeadershipCard leader={leader} index={index} />
+      </div>
+    );
+  })}
 </div>
           
 

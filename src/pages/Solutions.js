@@ -146,7 +146,7 @@ const Solutions = () => {
 
       /* HERO */
       .solution-hero {
-        padding: 110px 0 80px;
+        padding: 125px 0;
         background: linear-gradient(135deg,#f8fafc,#eef2f6);
         position: relative;
         overflow: hidden;
@@ -156,7 +156,7 @@ const Solutions = () => {
         content: "";
         position: absolute;
         right: -100px;
-        top: -80px;
+        top: -70px;
         width: 450px;
         height: 450px;
         background: radial-gradient(circle, rgba(174,44,17,0.15), transparent);
@@ -246,7 +246,7 @@ const Solutions = () => {
 
       /* INTRO */
       .intro {
-        margin-top: -60px;
+        margin-top: -120px;
         position: relative;
         z-index: 2;
       }

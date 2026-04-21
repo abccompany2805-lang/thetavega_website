@@ -61,7 +61,7 @@ useEffect(() => {
   style={{
     background:
       "linear-gradient(180deg, #ffffff 0%, rgba(245,244,241,0.55) 100%)",
-    padding: "100px 20px",
+    padding: "70px 0",
     position: "relative",
     overflow: "hidden",
   }}
@@ -70,25 +70,27 @@ useEffect(() => {
   <div
     style={{
       position: "absolute",
-      top: "-100px",
-      right: "-100px",
-      width: "400px",
-      height: "400px",
-      background:
-        "radial-gradient(circle, rgba(219,153,65,0.15), transparent 70%)",
+      top: "-120px",
+      right: "-120px",
+      width: "320px",
+      height: "320px",
       borderRadius: "50%",
+      background: "rgba(219, 153, 65, 0.10)",
+      filter: "blur(55px)",
       zIndex: 0,
+      animation: "floatSoft 8s ease-in-out infinite"
     }}
   />
 
   <div
     style={{
-      maxWidth: "1200px",
+      maxWidth: "1300px",
+      marginBottom: "20px",
       margin: "0 auto",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: "50px",
+      gap: "20px",
       flexWrap: "wrap",
       position: "relative",
       zIndex: 1,
@@ -99,13 +101,22 @@ useEffect(() => {
       <div style={{ marginBottom: "20px" }}>
         <span
           style={{
-            backgroundColor: "rgba(145, 111, 66, 0.15)",
-            color: "var(--tv-red)",
-            fontSize: "12px",
-            fontWeight: "600",
-            letterSpacing: "1px",
-            padding: "6px 14px",
-            borderRadius: "20px",
+           
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "5px",
+  padding: "8px 16px",
+  borderRadius: "50px",
+  background: "rgba(255, 255, 255, 0.9)",
+  border: "1px solid rgba(0, 0, 0, 0.08)",
+  fontSize: "11px",
+  fontWeight: 700,
+  letterSpacing: "1px",
+  textTransform: "uppercase",
+  color: "rgb(174, 44, 17)",
+  boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.05)",
+  marginBottom: "0px",
+  backdropFilter: "blur(8px)",
           }}
         >
           INDUSTRIES
@@ -180,7 +191,7 @@ useEffect(() => {
         style={{
           width: "100%",
           maxWidth: "700px",
-          height: "500px",
+          height: "400px",
           borderRadius: "16px",
           background: "#E5E5DF", // placeholder color
           display: "flex",
@@ -188,7 +199,7 @@ useEffect(() => {
           justifyContent: "center",
           color: "#999",
           fontSize: "14px",
-          border: "2px dashed #ccc",
+          border: "1px dashed #ccc",
         }}
       >
          <img
@@ -210,6 +221,7 @@ useEffect(() => {
       <div
   style={{
     textAlign: "center",
+    
    marginBottom:"-30px",
   }}
 >
@@ -222,6 +234,7 @@ useEffect(() => {
     textTransform: "uppercase",
     color: "rgb(174, 44, 17)",
     marginBottom: "-90px", 
+    marginTop:"30px",
        
     textAlign: "center",
     
